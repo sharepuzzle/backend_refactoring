@@ -1,0 +1,21 @@
+spring:
+  config:
+    activate:
+      on-profile: "local"
+  datasource:
+    url: jdbc:mysql://localhost:3306/puzzle?useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: mysql1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    defer-datasource-initialization: false
+    hibernate.ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+      hibernate.default_batch_fetch_size: 100
+#  sql.init.mode: always
+#  flyway:
+#    enabled: true
+#    baseline-on-migrate: true
+#    baseline-version: 0
