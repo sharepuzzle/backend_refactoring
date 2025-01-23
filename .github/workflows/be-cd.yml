@@ -10,11 +10,5 @@ jobs:
   deploy:
     runs-on: [self-hosted, sharepuzzle]
     steps:
-      - name: Set up JDK
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '21'
-
       - name: Execute script on EC2 to deploy
         run: sudo sh ~/deploy-script-dev.sh
