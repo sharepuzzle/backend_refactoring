@@ -1,0 +1,14 @@
+name: BE CD
+
+on:
+  workflow_dispatch:
+    push:
+        branches:
+        - develop
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, sharepuzzle]
+    steps:
+      - name: Execute script on EC2 to deploy
+        run: sudo sh ~/deploy-script-dev.sh
